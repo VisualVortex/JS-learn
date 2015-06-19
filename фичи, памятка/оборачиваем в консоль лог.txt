@@ -1,0 +1,26 @@
+1) Создаешь сниппет (Tools - New Snippet), копируешь:
+<snippet>
+	<content><![CDATA[
+console.log(${1:$SELECTION});
+]]></content>
+<tabTrigger>c</tabTrigger> 
+<scope>source.js</scope>
+</snippet>
+Сохраняешь в "Packages/User/" с именем, например: ConsoleLog.sublime-snippet.
+2) Создаешь макрос (просто текстовый файл с расширением .sublime-macro): 
+[{"args":{"to": "eol", "extend": false},"command": "move_to"},
+	{"args":{"extend": true,"to": "bol"},"command": "move_to"},
+	{"args":{"name": "Packages/User/ConsoleLog.sublime-snippet"},
+"command":"insert_snippet"}]
+Сохраняешь там же с именем, например: ConsoleLog.sublime-macro.
+3) Открываешь юзерские бинды (Preferences - Key Bindings-User) и вставляешь:
+[ {
+		"keys": ["ctrl+shift+c"], 
+		"command": "run_macro_file", 
+		"args": {"file": "Packages/User/ConsoleLog.sublime-macro"}
+	}]
+
+В "keys" ставишь любое удобное сочетание клавиш или оставляешь это и сохраняешь.
+4) Готово! Обертка работает с полной строкой, поэтому на ней ничего лишнего не писать. Положение курсора на оборачиваемой строке не имеет значения. Отступы слева не учитываются, справа - учитываются. 
+5) Для оборачивания сразу нескольких строк, выделяешь нужные строки, переходишь в мультикурсор (Ctrl+Shift+L) и дальше жмешь сочетание в "keys".
+6) Можно создавать команду набором с+TAB, курсор сразу переместится внутрь скобок console.log(), где и набрать нужный аргумент.
