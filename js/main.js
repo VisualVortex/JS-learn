@@ -4,38 +4,17 @@
  * Created by d.emelin on 18.06.15.
  */
 console.log("Script is working!");
-/* alert("ща ошибка будет");
- [1, 2].forEach(alert)*/
-// пробуем вставлять комменты
-/* кажется комменты тут как и в HTML
- это многострочноый комментарий */
 
-/* ниже уже более новый код
- var message; // объявили переменную
- message = 'Hello'; //сохраняем переменную в строку.
- alert(message); // выведет содержание переменной */
+// The bitwise operators
 
-var userName = 'John', age = 25, message = 'hello'; // несколько переменных сразу
-
-var x;
-// alert( x ); // выведет "undefined"
-var user = {name: "Вася"};
-
-
-typeof undefined
-var a =1;
-var b = 2;
-var c = 4 - (a=b+2);
-console.log(c);
-console.log(10%3);
-console.log(13%5);
-console.log(97%13);
-console.log("");
-var i = 3;
-console.log(--i);
-i = 3;
-console.log(i--);
-
-a = (5, 6);
-
-alert( a );
+// потестируем
+var a =1, b= 2, c=7;
+console.log(a<<1); // как буд-то умножает на 2 отмеченое кол-во раз
+console.log(b<<1);
+console.log(c<<2); // и тут тоже
+console.log(c>>1); // делит на 2
+console.log(7>>1); // делит на 2 и округляет до меньшего (Дробная часть, если она есть, отбрасывается.)
+console.log(a>>1); // если уже единицы сдвинуть в право то получается 0, сколько не сдвигай
+console.log(parseInt("11111", 2)); // двоичная записть 11000 превратилось в обычное число
+console.log(c.toString(2)); // наоборот обычное чило превращает в двоичную строку
+console.log(31&7); // 7 . в общем смысл понял что пересекающиеся единицы считает, но вручную пипец сложно :)
