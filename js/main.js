@@ -5,16 +5,68 @@
  */
 console.log("Script is working!");
 
-// The bitwise operators
+//////// User interaction
 
-// потестируем
-var a =1, b= 2, c=7;
-console.log(a<<1); // как буд-то умножает на 2 отмеченое кол-во раз
-console.log(b<<1);
-console.log(c<<2); // и тут тоже
-console.log(c>>1); // делит на 2
-console.log(7>>1); // делит на 2 и округляет до меньшего (Дробная часть, если она есть, отбрасывается.)
-console.log(a>>1); // если уже единицы сдвинуть в право то получается 0, сколько не сдвигай
-console.log(parseInt("11111", 2)); // двоичная записть 11000 превратилось в обычное число
-console.log(c.toString(2)); // наоборот обычное чило превращает в двоичную строку
-console.log(31&7); // 7 . в общем смысл понял что пересекающиеся единицы считает, но вручную пипец сложно :)
+/*var name = prompt("Как Вас зовут?", "Никак.");
+console.log(name);*/
+
+/////////Conditional operators
+
+/*var age = prompt('возраст?', 18);
+var message = (age<3) ? 'Малыш привет':
+    (age<18)? 'Привет':
+        (age<100)?'Здравствуйте':
+            'Необычный возраст :)';
+alert(message);*/
+
+/*var JsName = prompt('Каково «официальное» название JavaScript');
+if (JsName == "EcmaScript") {
+    console.log('Верно')
+}
+else {
+    console.log('не знаете? EcmaScript!')
+};*/
+
+/*var number = prompt('напишите число');
+if (number < 0) {
+    console.log(-1)
+}
+else if (number > 0) {
+    console.log(1)
+}
+else {
+    console.log(0)
+}
+;*/
+
+/*var name = "admin", pass="black man";
+var userName = prompt('Who is it?');
+if (userName == null) {
+    console.log('Cancel');
+}
+else if (userName == name) {
+    var password = prompt("enter password");
+    if (password == null) {
+        console.log('Cancel');
+    }
+    else if (password == pass) {
+        console.log('Hi, Admin');
+    }
+    else {
+        console.log("Wrong Password")
+    }
+}
+else {
+    console.log("I don't know U");
+}*/
+/*var b =1;
+var a = prompt("Веедите число 'а' для 'a + 1 < 4' ");
+var result = (+a + +b < 4) ? 'few' : 'much';
+console.log(result);
+console.log(a);
+console.log(b);*/
+var login = prompt("Login?");
+var message = (login == 'Вася') ? console.log('Привет') :
+    (login =='Директор')? console.log('Здравствуйте'):
+        (login == '') ? console.log('Нет логина'):
+            console.log('?');
