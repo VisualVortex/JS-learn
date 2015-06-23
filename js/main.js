@@ -5,68 +5,57 @@
  */
 console.log("Script is working!");
 
-//////// User interaction
+///////// Logical operators
 
-/*var name = prompt("Как Вас зовут?", "Никак.");
-console.log(name);*/
-
-/////////Conditional operators
-
-/*var age = prompt('возраст?', 18);
-var message = (age<3) ? 'Малыш привет':
-    (age<18)? 'Привет':
-        (age<100)?'Здравствуйте':
-            'Необычный возраст :)';
-alert(message);*/
-
-/*var JsName = prompt('Каково «официальное» название JavaScript');
-if (JsName == "EcmaScript") {
-    console.log('Верно')
-}
-else {
-    console.log('не знаете? EcmaScript!')
-};*/
-
-/*var number = prompt('напишите число');
-if (number < 0) {
-    console.log(-1)
-}
-else if (number > 0) {
-    console.log(1)
-}
-else {
-    console.log(0)
-}
-;*/
-
-/*var name = "admin", pass="black man";
-var userName = prompt('Who is it?');
-if (userName == null) {
-    console.log('Cancel');
-}
-else if (userName == name) {
-    var password = prompt("enter password");
-    if (password == null) {
-        console.log('Cancel');
-    }
-    else if (password == pass) {
-        console.log('Hi, Admin');
-    }
-    else {
-        console.log("Wrong Password")
-    }
-}
-else {
-    console.log("I don't know U");
+/*var hour = 9;
+if (hor <10 || > 18) {
+    console.log("Office is working between 10 and 18 hours")
 }*/
-/*var b =1;
-var a = prompt("Веедите число 'а' для 'a + 1 < 4' ");
-var result = (+a + +b < 4) ? 'few' : 'much';
-console.log(result);
-console.log(a);
-console.log(b);*/
-var login = prompt("Login?");
-var message = (login == 'Вася') ? console.log('Привет') :
-    (login =='Директор')? console.log('Здравствуйте'):
-        (login == '') ? console.log('Нет логина'):
-            console.log('?');
+
+/*alert( alert(1) || 2 || alert(3) );*/
+/*var age = prompt('age');
+if (age >=14 && age <=90) {
+    console.log("good");
+}
+else {
+    console.log("bad");
+}*/
+//Напишите условие if для проверки того факта, что age НЕ находится между 14 и 90 включительно.
+/*var age = prompt('age');
+
+if (!(age >=14 && age <=90)) {
+    console.log("good");
+}
+else {
+    console.log("bad");
+}*/
+/*
+if (age <14 || age >90) {
+    console.log("good");
+}
+else {
+    console.log("bad");
+}*/
+
+
+///Type conversion for primitives
+console.log("" + 1 + 0); // "10"
+console.log("" - 1 + 0); // -1
+console.log(true + false); // 1
+console.log(6 / "3"); // 2
+console.log("2" * "3");// 6
+console.log(4 + 5 + "px");// "9px"
+console.log("$" + 4 + 5);// "$45"
+console.log("4" - 2);// 2
+console.log("4px" -2);// nan
+console.log(7/0); //infinity
+console.log("  -9\n" + 5);// "  -9\n5"
+console.log("  -9\n" - 5);// -14
+console.log(5 && 2);// 2
+console.log(2 && 5);// 5
+console.log(5 || 0);// 5
+console.log(0 || 5);// 5
+console.log(null + 1);//1
+console.log(undefined + 1);// nan
+console.log(null == "\n0\n");// false
+console.log(+null == +"\n0\n"); // true
