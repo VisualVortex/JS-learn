@@ -5,50 +5,65 @@
  */
 console.log("Script is working!");
 
-///////// Loops - while, for
+///////// Switch
+/*Напишите «if», аналогичный «switch»
+важность: 5решение
+    Напишите if..else, соответствующий следующему switch:
+
+        switch (browser) {
+            case 'IE':
+                alert( 'О, да у вас IE!' );
+                break;
+
+            case 'Chrome':
+            case 'Firefox':
+            case 'Safari':
+            case 'Opera':
+                alert( 'Да, и эти браузеры мы поддерживаем' );
+                break;
+
+            default:
+                alert( 'Мы надеемся, что и в вашем браузере все ок!' );
+        }*/
+//Решение
 /*
- var sum = 0;
+var browser =  prompt("Введите браузер");
+if (browser === "IE") {
+    alert( 'О, да у вас IE!' );
+}else if (browser === "Chrome"
+    || browser === 'Firefox'
+    || browser === 'Safari'
+    || browser === 'Opera') {
+    alert( 'Да, и эти браузеры мы поддерживаем' );
+}else {
+    alert( 'Мы надеемся, что и в вашем браузере все ок!' );
+}*/
+// Задание 2
+/*
+ Переписать if'ы в switch
+ важность: 4решение
+ Перепишите код с использованием одной конструкции switch:
 
- while (true) {
+ var a = +prompt('a?', '');
 
- var value = +prompt("Введите число", '');
-
- if (!value) break; // (*)
-
- sum += value;
- console.log(sum);
+ if (a == 0) {
+ alert( 0 );
  }
- alert( 'Сумма: ' + sum );
- */
+ if (a == 1) {
+ alert( 1 );
+ }
 
-/*
-for (var i = 0; i < 10; i++) {
-    if (i%2 ==0) continue;
-    console.log(i);
-}*/
-
-/*
-for (var i = 2; i<=10; i++) {
-    if (i%2>0) continue;
-console.log(i);
+ if (a == 2 || a == 3) {
+ alert( '2,3' );
+ }*/
+//решение 2
+var a = +prompt('a?', '');
+switch(a) {
+    case 0:
+        alert( 0 ); break;
+    case 1:
+        alert( 1 ); break;
+    case 2:
+        case 3:
+            alert( '2,3' ); break;
 }
-*/
-/*for (var i = 0; i < 3; i++) {
-    console.log( "номер " + i + "!" );
-}*/
-/*
-var i=0;
-while (i++<3) console.log( "номер " + i + "!" );*/
-/*
-
-var i;
-do {i = prompt("Enter number more than 100",0);
-} while (i<=100 && i != null);*/
-
-nextPrime:
-    for (var i = 1; i < 10; i++) {
-        for (var j = 2; j < i; j++) {
-            if (i % j == 0) continue nextPrime;
-        }
-        console.log( i ); // простое
-    }
